@@ -1,0 +1,134 @@
+[
+  {
+    "id": "1",
+    "name": "Dr. Sarah Williams",
+    "role": "Head of Science",
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    "qual": "PhD in Physics",
+    "subject": "Physics & Quantum Mechanics",
+    "experience": "15+ Years",
+    "email": "sarah.w@school.edu",
+    "phone": "+880 1712 345678",
+    "bio": "Dedicated to inspiring young minds through the wonders of physics. I believe in practical learning and critical thinking.",
+    "education": [
+      "PhD in Physics - University of Oxford",
+      "M.Sc. in Applied Science - Dhaka University",
+      "B.Sc. in Physics - Chittagong University"
+    ],
+    "achievements": [
+      "Best Teacher Award 2024",
+      "Published 10+ Research Papers",
+      "National Science Fair Mentor"
+    ],
+    "social": { "linkedin": "#", "twitter": "#" }
+  },
+  {
+    "id": "2",
+    "name": "Mr. Robert Chen",
+    "role": "Senior English Faculty",
+    "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+    "qual": "MA in English Literature",
+    "subject": "English & Creative Writing",
+    "experience": "12+ Years",
+    "email": "robert.chen@school.edu",
+    "phone": "+880 1812 987654",
+    "bio": "Passionate about literature and language. I aim to help students find their own voice through writing and speech.",
+    "education": [
+      "MA in English Literature - Cambridge University",
+      "BA in English - Jahangirnagar University"
+    ],
+    "achievements": [
+      "Literary Excellence Award 2023",
+      "Coordinator of Debate Club",
+      "Editor of School Magazine"
+    ],
+    "social": { "linkedin": "#", "twitter": "#" }
+  },
+  {
+    "id": "3",
+    "name": "Mrs. Nusrat Jahan",
+    "role": "Mathematics Specialist",
+    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+    "qual": "M.Sc. in Pure Mathematics",
+    "subject": "Higher Math & Calculus",
+    "experience": "10+ Years",
+    "email": "nusrat.math@school.edu",
+    "phone": "+880 1912 112233",
+    "bio": "Making mathematics simple and fun for everyone. Logic is the key to solving any problem in life.",
+    "education": [
+      "M.Sc. in Mathematics - Rajshahi University",
+      "B.Sc. in Mathematics - BUET"
+    ],
+    "achievements": [
+      "Math Olympiad Coach",
+      "Top Performer Faculty 2022"
+    ],
+    "social": { "linkedin": "#", "twitter": "#" }
+  },
+  {
+    "id": "4",
+    "name": "Mr. Tanvir Ahmed",
+    "role": "Head of IT Department",
+    "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a",
+    "qual": "M.Sc. in Software Engineering",
+    "subject": "ICT & Computer Science",
+    "experience": "8+ Years",
+    "email": "tanvir.it@school.edu",
+    "phone": "+880 1512 445566",
+    "bio": "Technology is the future. My goal is to equip students with the coding skills needed for the 21st century.",
+    "education": [
+      "M.Sc. in SE - North South University",
+      "B.Sc. in CSE - Shahjalal University (SUST)"
+    ],
+    "achievements": [
+      "Google Certified Educator",
+      "Lead Developer of School Management System",
+      "Robotics Club Instructor"
+    ],
+    "social": { "linkedin": "#", "twitter": "#" }
+  },
+  {
+    "id": "5",
+    "name": "Ms. Sophia Lee",
+    "role": "Senior Biology Teacher",
+    "image": "https://images.unsplash.com/photo-1580894732230-282928646391",
+    "qual": "M.Sc. in Molecular Biology",
+    "subject": "Biology & Genetics",
+    "experience": "14+ Years",
+    "email": "sophia.bio@school.edu",
+    "phone": "+880 1312 778899",
+    "bio": "Understanding life at a molecular level. I encourage students to explore the natural world with curiosity.",
+    "education": [
+      "M.Sc. in Biology - National University of Singapore",
+      "B.Sc. in Botany - Dhaka University"
+    ],
+    "achievements": [
+      "Outstanding Researcher Award 2021",
+      "Mentor for Biological Olympiad",
+      "Green Campus Initiative Lead"
+    ],
+    "social": { "linkedin": "#", "twitter": "#" }
+  },
+  {
+    "id": "6",
+    "name": "Coach Michael Ford",
+    "role": "Physical Education Director",
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+    "qual": "B.PEd in Sports Science",
+    "subject": "Physical Education & Training",
+    "experience": "20+ Years",
+    "email": "coach.ford@school.edu",
+    "phone": "+880 1612 001122",
+    "bio": "A healthy body leads to a healthy mind. Discipline and teamwork are the foundations of success.",
+    "education": [
+      "B.PEd - BKSP (Bangladesh)",
+      "Sports Management Diploma - Australia"
+    ],
+    "achievements": [
+      "Former National Level Athlete",
+      "Best Coach Award (District Level)",
+      "Organized 15+ Annual Sports Meets"
+    ],
+    "social": { "linkedin": "#", "twitter": "#" }
+  }
+]

@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+@plugin "daisyui/theme" {
+  name: "mytheme";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  /* Background Colors */
+  --color-base-100: oklch(100% 0 0);        /* Pure White background */
+  --color-base-200: oklch(97% 0.01 240);    /* Very Light Gray/Blue for sections */
+  --color-base-300: oklch(92% 0.02 240);    /* Borders and subtle dividers */
+  --color-base-content: oklch(25% 0.04 240); /* Main text - Dark Slate */
+
+  /* Brand Colors */
+  --color-primary: oklch(55% 0.20 250);     /* #4f46e5 (Electric Indigo) */
+  --color-primary-content: oklch(98% 0.01 250); /* White text on primary buttons */
+
+  --color-secondary: oklch(75% 0.15 200);   /* Soft Sky Blue */
+  --color-secondary-content: oklch(20% 0.05 200);
+
+  --color-accent: oklch(85% 0.20 90);       /* Gold/Amber for highlighting */
+  --color-accent-content: oklch(25% 0.05 90);
+
+  /* Status Colors */
+  --color-info: oklch(70% 0.15 220);
+  --color-success: oklch(65% 0.20 145);     /* Professional Green for "Pass" status */
+  --color-warning: oklch(82% 0.18 85);
+  --color-error: oklch(60% 0.25 25);
+}
+
+
+
+@plugin "daisyui/theme" {
+  name: "novusDark";
+  default: false;
+  prefersdark: true;
+  color-scheme: "dark";
+
+  /* Background Colors (Deep Slate/Black) */
+  --color-base-100: oklch(20% 0.02 250);    /* Deepest Background */
+  --color-base-200: oklch(25% 0.02 250);    /* Card/Section Background */
+  --color-base-300: oklch(30% 0.03 250);    /* Borders/Dividers */
+  --color-base-content: oklch(95% 0.01 250); /* Main text - Off White */
+
+  /* Brand Colors (Slightly brighter for dark mode) */
+  --color-primary: oklch(65% 0.22 260);     /* Brighter Indigo */
+  --color-primary-content: oklch(100% 0 0);
+
+  --color-secondary: oklch(45% 0.15 200);   /* Muted Sky Blue */
+  --color-secondary-content: oklch(98% 0.01 200);
+
+  --color-accent: oklch(80% 0.18 90);       /* Soft Gold for dark mode highlights */
+  --color-accent-content: oklch(20% 0.05 90);
+
+  /* Status Colors */
+  --color-info: oklch(60% 0.15 220);
+  --color-success: oklch(70% 0.18 145);
+  --color-warning: oklch(85% 0.15 85);
+  --color-error: oklch(65% 0.20 25);
+}

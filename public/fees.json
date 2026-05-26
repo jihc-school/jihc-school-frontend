@@ -1,0 +1,69 @@
+{
+  "academic_fees": {
+    "primary": [
+      {
+        "id": "p1",
+        "grade": "Play - KG",
+        "admission": "8,000",
+        "tuition": "2,000",
+        "session": "4,500",
+        "lab": "0",
+        "transport": "1,200"
+      },
+      {
+        "id": "p2",
+        "grade": "Class 1 - 3",
+        "admission": "10,000",
+        "tuition": "2,500",
+        "session": "5,000",
+        "lab": "300",
+        "transport": "1,500"
+      },
+      {
+        "id": "p3",
+        "grade": "Class 4 - 5",
+        "admission": "10,000",
+        "tuition": "3,000",
+        "session": "5,000",
+        "lab": "500",
+        "transport": "1,500"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "s1",
+        "grade": "Class 6 - 8",
+        "admission": "12,000",
+        "tuition": "4,000",
+        "session": "7,000",
+        "lab": "1,000",
+        "transport": "1,800"
+      },
+      {
+        "id": "s2",
+        "grade": "Class 9 - 10",
+        "admission": "15,000",
+        "tuition": "5,000",
+        "session": "8,500",
+        "lab": "2,000",
+        "transport": "1,800"
+      }
+    ]
+  },
+  "scholarships": [
+    { "type": "Merit Base (GPA 5.0)", "waiver": "25% Off" },
+    { "type": "Sibling Discount", "waiver": "15% Off" },
+    { "type": "Female Student Policy", "waiver": "10% Off" }
+  ],
+  "transport_zones": [
+    { "zone": "Inside City (Zone A)", "fee": "1,200" },
+    { "zone": "Suburbs (Zone B)", "fee": "1,800" },
+    { "zone": "Extended Area (Zone C)", "fee": "2,500" }
+  ],
+  "policies": [
+    "Fees must be paid within the 10th of every month.",
+    "Late fee of ৳ 200 applicable after the deadline.",
+    "Admission fees are non-refundable after the session starts.",
+    "Exam fees are to be cleared 15 days before the term starts."
+  ]
+}
