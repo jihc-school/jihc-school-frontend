@@ -22,13 +22,14 @@ import StudentList from "../pages/Dashboard/Admin/StudentList/StudentList";
 import TeacherList from "../pages/Dashboard/Admin/TeacherList/TeacherList";
 import ExamManager from "../pages/Dashboard/Admin/ExamManager/ExamManager";
 import ResultEntryPage from "../pages/Dashboard/ResultEntryPage/ResultEntryPage";
+import ErrorPage from "../pages/Error/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   // Public Routes
   {
     path: "/",
     Component: MainLayouts,
-    errorElement: 
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       { index: true, Component: Home },
       { path: "about", Component: About },
