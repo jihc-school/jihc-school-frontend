@@ -65,14 +65,14 @@ const Navbar = () => {
 
           {/* Logo Section */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="max-w-17">
+            <div className="max-w-14">
               <img src={logo} alt="" />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="text-2xl font-black text-primary">
+              <span className="text-[22px] font-black text-primary">
                 JIHC
               </span>
-              <span className="text-[10px] font-bold tracking-[0.25em] mt-1.5 text-secondary">
+              <span className="text-[18px] font-bold tracking-[0.25em] mt-1 text-secondary">
                 SCHOOL
               </span>
             </div>
