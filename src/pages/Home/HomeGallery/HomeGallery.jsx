@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router";
 
 const HomeGallery = () => {
   const photos = [
@@ -59,9 +60,9 @@ const HomeGallery = () => {
             </p>
           </div>
           <div className="hidden md:flex">
-            <button className="btn btn-primary btn-outline gap-2 rounded-full border-2">
+            <Link to={"/gallery"} className="btn btn-primary btn-outline gap-2 rounded-full border-2">
               View All Photos <FaArrowRight />
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -98,9 +99,9 @@ const HomeGallery = () => {
 
         {/* Action Button */}
         <div className="md:hidden mt-8">
-          <button className="btn btn-primary btn-outline gap-2 rounded-full border-2">
+          <Link to={"/gallery"} className="btn btn-primary btn-outline gap-2 rounded-full border-2">
             View All Photos <FaArrowRight />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

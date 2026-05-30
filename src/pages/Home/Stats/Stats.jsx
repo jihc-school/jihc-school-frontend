@@ -11,28 +11,28 @@ const Stats = () => {
       id: 1,
       label: "Total Students",
       value: "1200+",
-      icon: <FaUserGraduate className="text-3xl text-primary" />,
+      icon: <FaUserGraduate />,
       description: "Growing every year",
     },
     {
       id: 2,
       label: "Expert Teachers",
       value: "45+",
-      icon: <FaChalkboardTeacher className="text-3xl text-secondary" />,
+      icon: <FaChalkboardTeacher />,
       description: "Highly qualified",
     },
     {
       id: 3,
       label: "Modern Labs",
       value: "12+",
-      icon: <FaFlask className="text-3xl text-accent" />,
+      icon: <FaFlask />,
       description: "Practical learning",
     },
     {
       id: 4,
       label: "Success Rate",
       value: "100%",
-      icon: <FaAward className="text-3xl text-success" />,
+      icon: <FaAward />,
       description: "In Board Exams",
     },
   ];
@@ -53,7 +53,7 @@ const Stats = () => {
               className="card rounded-[2.5rem] bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-base-300"
             >
               <div className="card-body items-center text-center">
-                <div className="p-4 bg-base-100 rounded-full shadow-inner mb-2">
+                <div className="p-4 bg-base-100 rounded-full shadow-inner mb-2 text-secondary text-3xl">
                   {stat.icon}
                 </div>
                 <h3 className="text-4xl font-extrabold text-base-content">

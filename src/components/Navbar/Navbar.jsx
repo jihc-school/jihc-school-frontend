@@ -2,6 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router";
 import { FaGraduationCap, FaBars } from "react-icons/fa";
 import { MdDashboardCustomize } from "react-icons/md";
+import logo from "../../assets/Logo.png";
 
 const Navbar = () => {
   const navOptions = (
@@ -64,14 +65,14 @@ const Navbar = () => {
 
           {/* Logo Section */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="bg-primary p-2 rounded-xl text-primary-content shadow-md group-hover:scale-110 transition-transform">
-              <FaGraduationCap size={28} />
+            <div className="max-w-17">
+              <img src={logo} alt="" />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="text-xl font-black tracking-tight text-primary">
+              <span className="text-2xl font-black text-primary">
                 JIHC
               </span>
-              <span className="text-[10px] font-bold tracking-[0.25em] text-secondary">
+              <span className="text-[10px] font-bold tracking-[0.25em] mt-1.5 text-secondary">
                 SCHOOL
               </span>
             </div>

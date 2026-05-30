@@ -11,7 +11,6 @@ const KeyFeatures = () => {
       image:
         "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1000&auto=format&fit=crop", // placeholder image
       icon: <FaLaptopCode />,
-      iconBg: "bg-indigo-600",
     },
     {
       id: 2,
@@ -21,7 +20,6 @@ const KeyFeatures = () => {
       image:
         "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1000&auto=format&fit=crop", // placeholder image
       icon: <FaBusAlt />,
-      iconBg: "bg-amber-500",
     },
     {
       id: 3,
@@ -31,7 +29,6 @@ const KeyFeatures = () => {
       image:
         "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1000&auto=format&fit=crop", // placeholder image
       icon: <FaFlask />,
-      iconBg: "bg-sky-500",
     },
   ];
 
@@ -68,7 +65,7 @@ const KeyFeatures = () => {
                 />
                 {/* Floating Icon */}
                 <div
-                  className={`absolute bottom-6 left-6 ${feature.iconBg} text-white p-4 rounded-2xl text-2xl shadow-lg z-10`}
+                  className={`absolute bottom-6 left-6 bg-secondary text-white p-4 rounded-2xl text-2xl shadow-lg z-10`}
                 >
                   {feature.icon}
                 </div>
