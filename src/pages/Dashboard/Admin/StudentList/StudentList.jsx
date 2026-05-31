@@ -13,6 +13,7 @@ import Swal from "sweetalert2";
 import StudentTable from "./StudentTable/StudentTable";
 import DetailModal from "./DetailModal/DetailModal";
 import EditModal from "./EditModal/EditModal";
+import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 
 const StudentList = () => {
   const [students, setStudents] = useState([]);
@@ -20,6 +21,7 @@ const StudentList = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedClass, setSelectedClass] = useState("");
   const [selectedStatus, setSelectedStatus] = useState("");
+  const axiosSecure = useAxiosSecure();
 
   const [isDetailOpen, setIsDetailOpen] = useState(false);
   const [isEditOpen, setIsEditOpen] = useState(false);
@@ -31,7 +33,7 @@ const StudentList = () => {
 
   const fetchStudents = async () => {
     try {
-      const response = await axios.get(
+      const response = await axiosSecure.get(
         `${import.meta.env.VITE_API_URL}/api/all-students`,
       );
       setStudents(response.data);

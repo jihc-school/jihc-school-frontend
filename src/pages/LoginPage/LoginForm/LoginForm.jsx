@@ -3,26 +3,45 @@ import { FaUser, FaLock, FaArrowRight } from "react-icons/fa";
 import useAuth from "../../../hooks/useAuth";
 import { useNavigate } from "react-router";
 import useUserRole from "../../../hooks/useUserRole";
+import Spinner from "../../../components/Common/Spinner/Spinner";
+import axios from "axios";
 
 const LoginForm = ({ onForgot }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [navigating, setNavigating] = useState(false);
   const navigate = useNavigate();
-  const { login } = useAuth();
-  const { role } = useUserRole();
+  const { login, loading } = useAuth();
+
+  if (loading || navigating) return <Spinner />;
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
     setError("");
+
     try {
-      await login(email, password);
-      if (role === "admin") navigate("/admin/admin-overview");
-      else if (role === "teacher") navigate("/teacher/teacher-overview");
+      const result = await login(email, password);
+      setNavigating(true);
+
+      const token = await result.user.getIdToken(true);
+
+      const res = await axios.get(
+        `${import.meta.env.VITE_API_URL}/user/${result.user.email}/role`,
+        { headers: { Authorization: `Bearer ${token}` } },
+      );
+
+      const userRole = res.data.role;
+      console.log("Fetched role:", userRole);
+
+      if (userRole === "admin") navigate("/admin/admin-overview");
+      else if (userRole === "teacher") navigate("/teacher/teacher-overview");
       else navigate("/student/student-overview");
     } catch (err) {
+      console.error(err);
       setError("Invalid email or password.");
+    } finally {
+      setNavigating(false);
     }
   };
 

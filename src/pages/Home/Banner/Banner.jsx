@@ -5,8 +5,11 @@ import {
   FaClipboardCheck,
 } from "react-icons/fa";
 import { Link } from "react-router";
+import useUserRole from "../../../hooks/useUserRole";
 
 const Banner = () => {
+  const {role} = useUserRole()
+  console.log(role)
   return (
     <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-slate-900">
       {/* Background Image with Dark Overlay */}

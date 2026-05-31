@@ -3,8 +3,11 @@ import { Link, NavLink } from "react-router";
 import { FaGraduationCap, FaBars } from "react-icons/fa";
 import { MdDashboardCustomize } from "react-icons/md";
 import logo from "../../assets/Logo.png";
+import useAuth from "../../hooks/useAuth";
 
 const Navbar = () => {
+  const { user, logout } = useAuth();
+
   const navOptions = (
     <>
       <li>
@@ -69,9 +72,7 @@ const Navbar = () => {
               <img src={logo} alt="" />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="text-[22px] font-black text-primary">
-                JIHC
-              </span>
+              <span className="text-[22px] font-black text-primary">JIHC</span>
               <span className="text-[18px] font-bold tracking-[0.25em] mt-1 text-secondary">
                 SCHOOL
               </span>
@@ -88,14 +89,23 @@ const Navbar = () => {
 
         {/* Dashboard Call to Action */}
         <div className="navbar-end">
-          <Link
-            to="/login"
-            className="btn btn-primary btn-sm md:btn-md px-6 text-white rounded-full hover:shadow-indigo-300 hover:shadow-lg transition-all flex items-center gap-2"
-          >
-            {/* MdDashboard*/}
-            <MdDashboardCustomize size={20} />
-            <span>Login</span>
-          </Link>
+          {!user ? (
+            <Link
+              to="/login"
+              className="btn btn-primary btn-sm md:btn-md px-6 text-white rounded-full hover:shadow-indigo-300 hover:shadow-lg transition-all flex items-center gap-2"
+            >
+              {/* MdDashboard*/}
+              <MdDashboardCustomize size={20} />
+              <span>Login</span>
+            </Link>
+          ) : (
+            <button
+              onClick={logout}
+              className="btn"
+            >
+             <span className="font-medium">Logout</span>
+            </button>
+          )}
         </div>
       </div>
     </div>

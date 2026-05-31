@@ -14,7 +14,7 @@ const useUserRole = () => {
       return res.data.role;
     },
   });
-
+  
   return { role, roleLoading: authLoading || roleLoading };
 };
 
