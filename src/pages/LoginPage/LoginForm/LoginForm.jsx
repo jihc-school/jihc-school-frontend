@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { FaUser, FaLock, FaArrowRight } from "react-icons/fa";
 import useAuth from "../../../hooks/useAuth";
 import { useNavigate } from "react-router";
+import useUserRole from "../../../hooks/useUserRole";
 
 const LoginForm = ({ onForgot }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-
-  const { login, role } = useAuth();
+  const { login } = useAuth();
+  const { role } = useUserRole();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -17,9 +18,9 @@ const LoginForm = ({ onForgot }) => {
     setError("");
     try {
       await login(email, password);
-      if (role === "admin") navigate("/admin/overview");
-      else if (role === "teacher") navigate("/teacher/overview");
-      else navigate("/student/overview");
+      if (role === "admin") navigate("/admin/admin-overview");
+      else if (role === "teacher") navigate("/teacher/teacher-overview");
+      else navigate("/student/student-overview");
     } catch (err) {
       setError("Invalid email or password.");
     }

@@ -1,5 +1,6 @@
 
 const PageBanner = ({ title, subtitle, bgImage }) => {
+
   return (
     <div className="relative h-[40vh] md:h-[50vh] flex items-center overflow-hidden bg-slate-900">
       

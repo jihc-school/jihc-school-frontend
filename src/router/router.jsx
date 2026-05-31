@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import MainLayouts from "../layouts/MainLayouts";
 import DashboardLayouts from "../layouts/DashboardLayouts";
 import PrivateRoute from "../routes/PrivateRoute";
+import ErrorPage from "../pages/Error/ErrorPage/ErrorPage";
 
 // Pages
 import Home from "../pages/Home/Home";
@@ -22,7 +23,8 @@ import StudentList from "../pages/Dashboard/Admin/StudentList/StudentList";
 import TeacherList from "../pages/Dashboard/Admin/TeacherList/TeacherList";
 import ExamManager from "../pages/Dashboard/Admin/ExamManager/ExamManager";
 import ResultEntryPage from "../pages/Dashboard/ResultEntryPage/ResultEntryPage";
-import ErrorPage from "../pages/Error/ErrorPage/ErrorPage";
+import Forbidden from "../pages/Error/Forbidden/Forbidden";
+import DashboardLayout from "../layouts/DashboardLayouts";
 
 export const router = createBrowserRouter([
   // Public Routes
@@ -40,7 +42,7 @@ export const router = createBrowserRouter([
       { path: "admissions", Component: Admissions },
       { path: "results", Component: ResultPortal },
       { path: "login", Component: LoginPage },
-      // { path: "forbidden", Component: ForbiddenPage },
+      { path: "forbidden", Component: Forbidden },
     ],
   },
 

@@ -22,11 +22,16 @@ import {
   FaUserPlus,
 } from "react-icons/fa";
 import useUserRole from "../../../hooks/useUserRole";
+import Spinner from "../../../components/Common/Spinner/Spinner";
 
 const Sidebar = ({ isCollapsed, closeMobile }) => {
-  const { logout } = useAuth();
-  const { role } = useUserRole();
+  const { logout, loading } = useAuth();
+  const { role, roleLoading } = useUserRole();
   const location = useLocation();
+
+  if(loading || roleLoading){
+    return <Spinner />;
+  }
 
   const menuItems = {
     admin: [

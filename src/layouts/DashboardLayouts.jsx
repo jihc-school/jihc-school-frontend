@@ -2,18 +2,22 @@ import React, { useState } from "react";
 import { Outlet, Navigate } from "react-router";
 import useAuth from "../hooks/useAuth";
 import Sidebar from "../pages/Dashboard/Sidebar/Sidebar";
+import useUserRole from "../hooks/useUserRole";
+import Spinner from "../components/Common/Spinner/Spinner";
 
 const DashboardLayout = () => {
-  const { user, role, loading } = useAuth();
+  const { user, loading } = useAuth();
+  const { role, roleLoading } = useUserRole();
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
-  if (loading)
+  if (loading || roleLoading)
     return (
       <div className="flex h-screen items-center justify-center">
-        Loading...
+        <Spinner></Spinner>
       </div>
     );
+
   if (!user) return <Navigate to="/login" />;
 
   return (
