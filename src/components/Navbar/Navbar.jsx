@@ -4,9 +4,11 @@ import { FaGraduationCap, FaBars } from "react-icons/fa";
 import { MdDashboardCustomize } from "react-icons/md";
 import logo from "../../assets/Logo.png";
 import useAuth from "../../hooks/useAuth";
+import useUserRole from "../../hooks/useUserRole";
 
 const Navbar = () => {
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
+  const { role } = useUserRole();
 
   const navOptions = (
     <>
@@ -43,6 +45,14 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  const getRoute = (role) => {
+    if (role === "admin") return "admin/admin-overview";
+    if (role === "teacher") return "teacher/teacher-overview";
+    return "student/student-overview";
+  };
+
+  const route = getRoute(role);
 
   return (
     <div className="bg-base-100 shadow-md sticky @[1580px]:px-0 px-4 md:px-6 lg:px-8 top-0 z-[100]">
@@ -99,12 +109,19 @@ const Navbar = () => {
               <span>Login</span>
             </Link>
           ) : (
-            <button
-              onClick={logout}
-              className="btn"
-            >
-             <span className="font-medium">Logout</span>
-            </button>
+            <Link to={route}>
+              <div className="avatar">
+                <div className="w-15 rounded-full">
+                  <img
+                    src={
+                      user.profileImage
+                        ? user.profileImage
+                        : "https://i.ibb.co.com/0p3dfhLc/optional-profile-pic.png"
+                    }
+                  />
+                </div>
+              </div>
+            </Link>
           )}
         </div>
       </div>

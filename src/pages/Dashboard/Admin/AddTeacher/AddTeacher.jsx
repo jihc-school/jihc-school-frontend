@@ -53,7 +53,7 @@ const AddTeacher = () => {
 
       const teacherData = {
         ...data,
-        image: imageUrl,
+        profileImage: imageUrl,
         specialistIn: specialistIn
           .split(",")
           .map((s) => s.trim())

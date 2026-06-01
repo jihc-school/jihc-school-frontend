@@ -42,7 +42,7 @@ const AddStudent = () => {
 
       const studentData = Object.fromEntries(formData.entries());
 
-      studentData.image = imageUrl;
+      studentData.profileImage = imageUrl;
 
       const response = await axios.post(
         `${import.meta.env.VITE_API_URL}/api/add-student`,

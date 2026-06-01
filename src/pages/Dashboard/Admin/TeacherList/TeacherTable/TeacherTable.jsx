@@ -26,6 +26,8 @@ const TeacherTable = ({ teachers, onView, onEdit, onDelete }) => {
     }
   };
 
+  console.log(teachers)
+
   return (
     <div className="overflow-x-auto">
       <table className="w-full text-left border-collapse">
