@@ -1,5 +1,6 @@
 import React from "react";
-import { FaLaptopCode, FaBusAlt, FaFlask } from "react-icons/fa"; // React Icons
+import { FaLaptopCode, FaBusAlt, FaFlask } from "react-icons/fa";
+import { motion } from "motion/react";
 
 const KeyFeatures = () => {
   const features = [
@@ -36,7 +37,13 @@ const KeyFeatures = () => {
     <section className="py-20 bg-base-100">
       <div className="max-w-384 mx-auto @[1580px]:px-0 px-4 md:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mb-16 space-y-3">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="mb-16 space-y-3"
+        >
           <p className="text-primary font-bold uppercase tracking-[0.2em] text-xs">
             Why Choose Us
           </p>
@@ -47,12 +54,16 @@ const KeyFeatures = () => {
             We provide world-class facilities to ensure the best learning
             environment for our students.
           </p>
-        </div>
+        </motion.div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {features.map((feature) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
               key={feature.id}
               className="group bg-base-100 rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-base-200"
             >
@@ -82,7 +93,7 @@ const KeyFeatures = () => {
                   {feature.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

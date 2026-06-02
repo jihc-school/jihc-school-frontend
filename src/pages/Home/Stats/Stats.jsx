@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import {
   FaUserGraduate,
   FaChalkboardTeacher,
@@ -41,14 +42,27 @@ const Stats = () => {
     <section className="py-16 bg-base-100 @[1580px]:px-0 px-4 md:px-6 lg:px-8">
       <div className="max-w-384 mx-auto ">
         {/* Section Heading */}
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-10 text-base-content">
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl lg:text-5xl font-black mb-10 text-base-content"
+        >
           Our School at a <span className="text-primary">Glance</span>
-        </h2>
+        </motion.h2>
 
         {/* Stats Container */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {statsData.map((stat) => (
-            <div
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{
+                scale: 1,
+                opacity: 1,
+                transition: { duration: 1, ease: "easeOut" },
+              }}
+              viewport={{ once: false, amount: 0.2 }}
               key={stat.id}
               className="card rounded-[2.5rem] bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-base-300"
             >
@@ -66,7 +80,7 @@ const Stats = () => {
                   {stat.description}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

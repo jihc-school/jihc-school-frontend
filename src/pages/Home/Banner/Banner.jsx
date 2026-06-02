@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 import {
   FaGraduationCap,
   FaArrowRight,
@@ -24,7 +25,10 @@ const Banner = () => {
       </div>
 
       <div className="max-w-384 w-full mx-auto @[1580px]:px-0 px-4 md:px-6 lg:px-8 relative z-10 py-20">
-        <div className="max-w-3xl space-y-8">
+        <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, ease: "easeOut" }} className="max-w-3xl space-y-8">
           {/* Top Badge */}
           <div className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500/40 text-amber-500 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase">
             <span className="relative flex h-2 w-2">
@@ -81,7 +85,7 @@ const Banner = () => {
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Subtle Bottom Fade to next section */}
